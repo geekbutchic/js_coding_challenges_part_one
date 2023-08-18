@@ -9,16 +9,16 @@ Your tasks:
 */
 
 //Data set 1
-// const markWeight = 78;
-// const johnWeight = 92;
-// const markHeight = 1.69;
-// const johnHeight = 1.95;
+const markWeight = 78;
+const johnWeight = 92;
+const markHeight = 1.69;
+const johnHeight = 1.95;
 
 //Data set 2
-const markWeight = 95;
-const markHeight = 1.88;
-const johnWeight = 85;
-const johnHeight = 1.76;
+// const markWeight = 95;
+// const markHeight = 1.88;
+// const johnWeight = 85;
+// const johnHeight = 1.76;
 
 function calculateBMI(weight, height) {
   const bmi = weight / (height * height);
@@ -31,8 +31,8 @@ const johnsBmi = calculateBMI(johnWeight, johnHeight);
 // John's BMI is: 24.19
 
 if (markBmi > johnsBmi) {
-  console.log(`Mark's BMI (${markBmi}) is higher than John's!`);
+  console.log(`Mark's BMI (${markBmi}) is higher than John's (${johnsBmi})!`);
 } else {
-  console.log(`John's BMI (${johnsBmi}) is higher than Mark's`);
+  console.log(`John's BMI (${johnsBmi}) is higher than Mark's (${markBmi})`);
 }
 
