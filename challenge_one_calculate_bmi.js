@@ -60,3 +60,4 @@ console.log(markHigherBMI); // true
 
 const markHigherBMI2 = markBmi2 > johnsBmi2;
 console.log(markHigherBMI2); // false
+
