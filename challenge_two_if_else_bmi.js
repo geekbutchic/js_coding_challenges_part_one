@@ -36,3 +36,40 @@ if (markBmi > johnsBmi) {
   console.log(`John's BMI (${johnsBmi}) is higher than Mark's (${markBmi})`);
 }
 
+//==== Prompt can only be seen with dev tools opened move notes to HTML, JS folder
+
+//Lecture:  Equality Operators : == vs ===
+
+/*
+1. Declare a variable 'numNeighbors'
+ based on a prompt input like this: prompt (`How many neighbor countries does your country have?')
+ 
+ 2. If there is only 1 neighbor country, log to the console.(`Only 1 border!`) use loose equality == for now.
+
+ 3. Use an else-if block to log `1 More than 1 border` in case 'numNeighbors' is greater than 1`.
+ 
+ 4. Use an else block to log `No Borders` (this block will be executed when 'numNeighbors' is 0 or any other value).
+
+ 5. Test the code with different values of 'numNeighbor', including 1 and 0.
+
+ 6. Change == to ===, and test the code again, with the same values of 'numNeighbors'. Notice what happens when there is exactly 1 border! Why is this happening?
+
+ 7. Finally, convert 'numNeighbors' to a number, and watch what happens now when you input 1.
+
+ 8. Reflect on why we should use the === operator and type conversion in this situation.
+ 
+ */
+
+const numNeighbors = Number(
+  prompt(`How many neighbor countries does your country have?`)
+);
+
+if (numNeighbors === 0) {
+  console.log(`No borders.`);
+} else if (numNeighbors === 1) {
+  console.log(`Only 1 border.`);
+} else if (numNeighbors >= 2) {
+  console.log(`Wow you have many bordering countries!`);
+} else {
+  console.log(`Please enter a number of bordering countries...`);
+}
