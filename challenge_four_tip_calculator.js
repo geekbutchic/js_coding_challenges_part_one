@@ -12,7 +12,7 @@ Test Data : Test for bill value 275, 40, 430.
 
 // Test data
 const bill = 430;
-const tipPercentage = bill >= 50 && bill <= 300 ? 0.15 : 0.20;
+const tipPercentage = bill >= 50 && bill <= 300 ? 0.15 : 0.2;
 
 // Calculate the tip
 const tip = bill * tipPercentage;
@@ -21,5 +21,6 @@ const tip = bill * tipPercentage;
 const totalValue = bill + tip;
 
 // Print the message
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${totalValue}.`);
-
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${totalValue}.`
+);
