@@ -17,8 +17,8 @@ const mark = {
   mass: 78,
   height: 1.69,
   calcBmi: function() {
-    const bmi = this.mass / (this.height * this.height);
-    return bmi.toFixed(2);
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi.toFixed(2);
   }
 };
 
@@ -28,13 +28,13 @@ const john = {
   mass: 92,
   height: 1.95,
   calcBmi: function() {
-    const bmi = this.mass / (this.height * this.height);
-    return bmi.toFixed(2);
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi.toFixed(2);
   }
 };
 
-console.log(john.calcBmi());
 console.log(mark.calcBmi());
+console.log(john.calcBmi());
 
 const johnBMI = john.calcBmi();
 const markBMI = mark.calcBmi();
