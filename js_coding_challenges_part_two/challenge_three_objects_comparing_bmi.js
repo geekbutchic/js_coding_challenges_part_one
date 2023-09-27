@@ -52,3 +52,28 @@ if (johnBMI > markBMI) {
     `${john.firstName} and ${mark.firstName} have the same BMI (${johnBMI})!`
   );
 }
+
+
+// Refactored Version
+
+// Define the calcBmi function outside of the objects
+// function calcBmi() {
+//   const bmi = this.mass / (this.height * this.height);
+//   return bmi.toFixed(2);
+// }
+
+// const mark = {
+//   firstName: "Mark",
+//   lastName: "Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBmi: calcBmi // Assign the calcBmi function to the calcBmi property
+// };
+
+// const john = {
+//   firstName: "John",
+//   lastName: "Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBmi: calcBmi // Assign the calcBmi function to the calcBmi property
+// };
