@@ -17,10 +17,14 @@ const mark = {
   mass: 78,
   height: 1.69,
   calcBmi: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi.toFixed(2);
+    this.bmi = (this.mass / (this.height * this.height)).toFixed(2);
+    return this.bmi;
   }
 };
+
+/*
+In this version, the calcBmi function calculates the BMI and stores it as a property (bmi) inside the object itself. This means you can access the BMI directly as john.bmi without needing to recalculate it every time.
+*/
 
 const john = {
   firstName: "John",
@@ -28,31 +32,31 @@ const john = {
   mass: 92,
   height: 1.95,
   calcBmi: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi.toFixed(2);
+    const bmi = this.mass / (this.height * this.height);
+    return bmi.toFixed(2);
   }
 };
 
-console.log(mark.calcBmi());
-console.log(john.calcBmi());
+
+mark.calcBmi();
+console.log(`Mark: `, mark.bmi);
 
 const johnBMI = john.calcBmi();
-const markBMI = mark.calcBmi();
+console.log(`John: `, johnBMI);
 
-if (johnBMI > markBMI) {
+if (johnBMI > mark.bmi) {
   console.log(
-    `${john.firstName}'s BMI (${johnBMI}) is higher than ${mark.firstName}'s (${markBMI})!`
+    `${john.firstName}'s BMI (${johnBMI}) is higher than ${mark.firstName}'s (${mark.bmi})!`
   );
-} else if (markBMI > johnBMI) {
+} else if (mark.bmi > johnBMI) {
   console.log(
-    `${mark.firstName}'s BMI (${markBMI}) is higher than ${john.firstName}'s (${johnBMI})!`
+    `${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${johnBMI})!`
   );
 } else {
   console.log(
     `${john.firstName} and ${mark.firstName} have the same BMI (${johnBMI})!`
   );
 }
-
 
 // Refactored Version
 
