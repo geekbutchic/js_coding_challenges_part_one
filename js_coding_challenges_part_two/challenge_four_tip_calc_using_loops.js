@@ -33,35 +33,56 @@ Your tasks:
 // console.log(tips);
 // console.log(totalAmounts);
 
-// Refactored Version 
-function calculateTipPercentage(bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+// Refactored Version
+// function calculateTipPercentage(bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
 
-function calculateTotalAmount(bill) {
-  const tipPercentageValue = calculateTipPercentage(bill);
-  return bill + tipPercentageValue;
-}
+// function calculateTotalAmount(bill) {
+//   const tipPercentageValue = calculateTipPercentage(bill);
+//   return bill + tipPercentageValue;
+// }
 
-function calculateTipsAndTotalAmounts(billsArr) {
-  const tips = [];
-  const totalAmounts = [];
+// function calculateTipsAndTotalAmounts(billsArr) {
+//   const tips = [];
+//   const totalAmounts = [];
 
-  for (let i = 0; i < billsArr.length; i++) {
-    const bill = billsArr[i];
-    const tipPercentageValue = calculateTipPercentage(bill);
-    const totalAmount = calculateTotalAmount(bill);
+//   for (let i = 0; i < billsArr.length; i++) {
+//     const bill = billsArr[i];
+//     const tipPercentageValue = calculateTipPercentage(bill);
+//     const totalAmount = calculateTotalAmount(bill);
 
-    tips.push(tipPercentageValue);
-    totalAmounts.push(totalAmount);
+//     tips.push(tipPercentageValue);
+//     totalAmounts.push(totalAmount);
+//   }
+
+//   return { tips, totalAmounts };
+// }
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// const { tips, totalAmounts } = calculateTipsAndTotalAmounts(bills);
+
+// console.log(tips);
+// console.log(totalAmounts);
+
+// Sums up the Total of random arr and takes the average using a for loop. 
+
+/*
+Bonus : Write a function 'calcAverage' which takes an array called 'arr' as an argument.  This function calculates the average of all numbers in the given array.  
+*/
+
+const arr = [87, 45, 23, 67, 92, 34, 56, 78, 12, 99];
+
+function calcAverage(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i]; // sum += arr[i] shorthand version
+    console.log(`Sum Total: `, sum);
   }
-
-  return { tips, totalAmounts };
+  const average = sum / arr.length;
+  return average;
 }
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-
-const { tips, totalAmounts } = calculateTipsAndTotalAmounts(bills);
-
-console.log(tips);
-console.log(totalAmounts);
+const average = calcAverage(arr);
+console.log(`Average : `, average);
